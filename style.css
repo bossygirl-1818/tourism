@@ -1,0 +1,1260 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Section */
+#home {
+    background-image: url('assets/header.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Adding a darker overlay on the background image */
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay to improve text visibility */
+    z-index: -1;
+}
+
+#home .container {
+    position: relative;
+    z-index: 1;  /* Ensure the text is above the overlay */
+}
+
+#home h1 {
+    font-size: 3em;
+    color: #ffffff; /* White text */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Text shadow to make it brighter */
+}
+
+#home p {
+    font-size: 1.2em;
+    color: #ffffff; /* White text */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Light shadow for better visibility */
+}
+
+/* Search Bar Styling */
+.search-bar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 1.1em;
+    border: 2px solid #fff;
+    border-radius: 30px 0 0 30px;
+    width: 300px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+.search-bar input:focus {
+    border-color: #ff6347;
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.5);
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.search-bar button:hover {
+    background-color: #e5533c;
+}
+
+.search-bar input:focus + button {
+    background-color: #e5533c;
+}
+/* Book Your Trip Button */
+.btn {
+    background-color: #ff6347;  /* Tomato background color */
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;  /* Rounded corners */
+    font-size: 1.1em;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);  /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease;  /* Smooth transition for hover effect */
+    display: inline-block;
+}
+
+/* Hover effect */
+.btn:hover {
+    background-color: #e55347;  /* Darker shade of red when hovered */
+    transform: translateY(-3px);  /* Slightly lift the button when hovered */
+}
+
+/* Focus effect (for accessibility) */
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Features Section */
+#features {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#features h2 {
+    font-size: 3em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 28%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.feature:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.feature img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.feature p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Top Destinations Section */
+#destinations {
+    padding: 80px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+#destinations h2 {
+    font-size: 3em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.destination-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.destination {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 28%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.destination:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.destination img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.destination h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.destination p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Featured Packages Section */
+#featured-packages {
+    background-color: #f9f9f9;  /* Light background */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#featured-packages .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#featured-packages h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#featured-packages p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.package-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;  /* Ensures responsiveness */
+}
+
+.package-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 25%;  /* Cards will take 32% of the container width */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);  /* Lift card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Increased shadow on hover */
+}
+
+.package-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;  /* Makes sure the image fits the container */
+}
+
+.package-info {
+    padding: 20px;
+}
+
+.package-info h3 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.package-info .package-price {
+    font-size: 1.4em;
+    color: #ff6347;  /* Tomato color for price */
+    margin-bottom: 10px;
+}
+
+.package-info p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.package-info .btn {
+    background-color: #ff6347;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.package-info .btn:hover {
+    background-color: #e55347;
+    transform: translateY(-3px);  /* Button lift on hover */
+}
+
+/* Discount Section */
+#discount {
+    background-color: #f5f5f5;  /* Light grey background */
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 40px;  /* Adds space from the previous section */
+}
+
+#discount .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.discount-content {
+    position: relative;  /* Allows absolute positioning of text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;  /* Space between the image and text */
+    flex-wrap: wrap;  /* Makes the layout responsive */
+}
+
+/* Image as background with text on top */
+.discount-img {
+    background-image: url('assets/discount.jpg');  /* Set the background image */
+    background-size: cover;  /* Ensure the image covers the entire div */
+    background-position: center;  /* Center the background image */
+    width: 200%;
+    max-width: 1200px;  /* Limit width of the image */
+    height: 400px;  /* Set the height of the image */
+    border-radius: 45px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);  /* Soft shadow around the image */
+    position: relative;  /* Make this container relative for positioning text inside */
+}
+
+.discount-text {
+    position: absolute;  /* Position the text over the image */
+    top: 50%;  /* Vertically center the text */
+    left: 50%;  /* Horizontally center the text */
+    transform: translate(-50%, -50%);  /* Fine-tune the positioning */
+    color: white;  /* White text on top of the image */
+    text-align: center;
+    width: 80%;  /* Limit the width of the text */
+}
+
+.discount-text h2 {
+    font-size: 2.5em;
+    color:white;  /* Tomato color for headings */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.discount-text p {
+    font-size: 1.7em;
+    color: #fff;  /* White text color */
+    line-height: 1.5;
+}
+
+/* Reviews Section */
+#reviews {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#reviews h2 {
+    font-size: 3em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.reviews-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.review {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 18%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.review:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.review img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.review h4 {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #333;
+}
+
+.review p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #f1f1f1;  /* Light background for the section */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#contact .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;  /* Space between the columns */
+}
+
+/* Contact Info Section */
+.contact-info {
+    flex: 1;
+    min-width: 300px;  /* Ensures responsiveness */
+}
+
+.contact-info h3 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Links Section */
+.contact-links {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    gap: 40px;  /* Space between the sections */
+}
+
+.contact-links div {
+    flex: 1;
+    min-width: 200px;  /* Ensures responsiveness */
+}
+
+.contact-links h4 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-links ul li {
+    margin-bottom: 10px;
+}
+
+.contact-links ul li a {
+    text-decoration: none;
+    color: rgb(108, 221, 224);  /* Tomato color for the links */
+    font-size: 1.2em;
+}
+
+.contact-links ul li a:hover {
+    color: #333;  /* Darker color on hover */
+    text-decoration: underline;
+}
+
+/* Newsletter Section */
+#newsletter {
+    background-color: #160757;  /* Blue background */
+    padding: 40px 0;  /* Adds padding to the top and bottom */
+}
+
+#newsletter .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.newsletter-content h2 {
+    font-size: 2.5em;
+    color: white;  /* White text color for contrast */
+    margin-bottom: 15px;
+}
+
+.newsletter-content p {
+    font-size: 1.2em;
+    color: white;  /* White text color for better visibility on blue background */
+    margin-bottom: 20px;
+}
+
+.newsletter-content form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;  /* Space between the input and button */
+}
+
+.newsletter-content input[type="email"] {
+    padding: 10px;
+    width: 300px;  /* Adjust width of the input field */
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.newsletter-content button {
+    padding: 10px 20px;
+    background-color: #ff6347;  /* Tomato color for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.newsletter-content button:hover {
+    background-color: #e5533d;  /* Darker tomato color on hover */
+}
+
+/* bali */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffcc80;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    margin: 10px 0;
+}
+
+.attraction-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.attraction {
+    background-color: #53bae6;
+    padding: 15px;
+    border-radius: 5px;
+    flex: 1 1 30%;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+/* Ensure attraction items display properly */
+.attraction {
+    position: relative;  /* To position text over the image */
+    overflow: hidden;    /* Hide text initially */
+}
+
+/* Hidden text inside each attraction item */
+.attraction-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);  /* Dark background for text visibility */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 0;  /* Initially hidden */
+    transition: opacity 0.3s ease-in-out;  /* Smooth fade-in effect */
+}
+
+.attraction:hover .attraction-text {
+    opacity: 1;  /* Show the text when hovering */
+}
+
+/* Style for attraction images */
+.attraction img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease-in-out;  /* Smooth fade-in effect */
+}
+/* Attraction list layout */
+.attraction-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+}
+
+/* On smaller screens, make the attractions take full width */
+@media screen and (max-width: 768px) {
+    .attraction {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+}
+
+/*hero*/
+/* Hero Section Styles */
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 1.5em;
+    font-weight: 300;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 0.5em;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Adds a dark overlay to improve text readability */
+}
+
+
+/* Activities Section Styling */
+#activities {
+    padding: 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+#activities h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Use Flexbox to display items side by side */
+#activities ul {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items if they overflow */
+    justify-content: space-between; /* Distribute items with equal space between */
+    gap: 20px; /* Space between items */
+    padding: 0;
+    list-style: none;
+}
+
+#activities li {
+    flex: 1 1 calc(25% - 20px); /* Flex-grow: 1, Flex-shrink: 1, Set the width to 25% minus gap */
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+}
+
+/* Activities Section Styling */
+#activities {
+    padding: 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+#activities h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Use Flexbox to display items side by side */
+#activities ul {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items if they overflow */
+    justify-content: space-between; /* Distribute items with equal space between */
+    gap: 20px; /* Space between items */
+    padding: 0;
+    list-style: none;
+}
+
+#activities li {
+    flex: 1 1 calc(25% - 20px); /* Flex-grow: 1, Flex-shrink: 1, Set the width to 25% minus gap */
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+}
+
+/* Style the images */
+#activities img {
+    width: 20%; /* Make the image fill the container */
+    height: auto;
+    border-radius: 10px;
+    opacity: 0.9;
+    transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out; /* Transition for both transform and opacity */
+}
+
+/* Hover effect for images */
+#activities li:hover img {
+    transform: scale(1.05); /* Zoom-in effect */
+    opacity: 1; /* Full opacity on hover */
+}
+
+/* Hover effect for list items */
+#activities li:hover {
+    transform: scale(1.05); /* Zoom-in effect for the entire list item */
+}
+
+/* Hover effect for images */
+#activities li:hover img {
+    transform: scale(1.1); /* Slight zoom effect on image */
+    opacity: 1; /* Full opacity on hover */
+}
+
+/* Optional: Adding a fade-in effect for the text description */
+#activities li p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);  /* Dark background for text visibility */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* Make text visible when hovering over the list item */
+#activities li:hover p {
+    opacity: 1;
+}
+/* Travel Tips Section Styles */
+/* Travel Tips Section Styles */
+#tips {
+    background-color: #f4f4f4;
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 1200px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+#tips h2 {
+    font-size: 34px;
+    color: #4a90e2;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#tips .tip-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+#tips .tip-item img {
+    width: 150px; /* Set rectangular width */
+    height: 100px; /* Set rectangular height */
+    border-radius: 8px; /* Optional: gives rounded corners */
+    object-fit: cover;
+    margin-right: 25px;
+}
+
+#tips .tip-item p {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    flex-grow: 1; /* Ensures the text fills the available space */
+}
+
+/* Add hover effect to the image */
+#tips .tip-item img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #tips .tip-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 15px;
+    }
+
+    #tips .tip-item img {
+        margin-bottom: 20px;
+        width: 120px; /* Adjust width for mobile */
+        height: 80px; /* Adjust height for mobile */
+    }
+
+    #tips .tip-item p {
+        font-size: 16px;
+        max-width: 90%;
+    }
+}
+
+
+/* Flexbox for side-by-side layout */
+.tip-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tip-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.tip-item img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tip-item p {
+    flex: 1;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 10px;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .tip-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tip-item img {
+        margin: 10px 0;
+    }
+}
+/* Centering the button */
+.book-now-btn {
+    display: block;
+    width: 150px;
+    padding: 10px 20px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    background-color: #2d87f0;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: blink 1.5s infinite;
+}
+
+/* Blinking Animation */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Hover effect for the button */
+.btn:hover {
+    background-color: #1a5db3;
+}
+.view-your-stay-btn{ display: block;
+    width: 150px;
+    padding: 10px 20px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    background-color: #2d87f0;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* stay */
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header section with background image */
+.hero {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Add dark overlay for readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+/* Stay Details Section */
+#stay-details {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#stay-details h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#stay-details p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#stay-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #555;
+}
+
+/* Trip Planner Section */
+#trip-planner {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#trip-planner h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#trip-planner table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#trip-planner th, #trip-planner td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#trip-planner th {
+    background-color: #f3f3f3;
+    font-weight: bold;
+}
+
+#trip-planner tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Footer with buttons */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+}
+
+.btn, .book-now-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    color: #fff;
+    background-color: #ff6b6b;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover, .book-now-btn:hover {
+    background-color: #ff5252;
+}
+
+/* booking*/
+    
+   /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+/* Header Section */
+.hero {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* Booking Form Section */
+#booking-form {
+    background-color: white;
+    padding: 30px;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+input[type="number"],
+input[type="date"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    padding: 15px 30px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+#final-price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff6347;
+}
+
+/* Discount Images */
+#couple-discount, #group-discount {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#couple-discount img, #group-discount img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Celebration Image */
+#celebration-image {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#celebration-image img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+footer .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    #booking-form {
+        padding: 20px;
+    }
+
+    label, input[type="number"], input[type="date"], button[type="submit"] {
+        font-size: 1em;
+    }
+}
